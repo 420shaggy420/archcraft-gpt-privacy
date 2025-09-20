@@ -2,93 +2,216 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Privacy Policy - ArchCraft GPT</title>
+    <title>Privacy Policy – ArchCraft GPT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Privacy policy for ArchCraft GPT covering public APIs used, data handling, security, cookies, and contact details." />
+
+    <!-- Favicon: inline SVG -->
+    <link rel="icon" type="image/svg+xml"
+      href='data:image/svg+xml;utf8,
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+        <defs>
+          <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#1b2332"/>
+            <stop offset="100%" stop-color="#0e1420"/>
+          </radialGradient>
+          <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#9aefff"/>
+            <stop offset="100%" stop-color="#25b7d6"/>
+          </linearGradient>
+        </defs>
+        <circle cx="64" cy="64" r="60" fill="url(#bg)"/>
+        <path d="M64 16 L108 104 H20 Z" fill="none" stroke="url(#edge)" stroke-width="7"/>
+        <path d="M48 84 L64 70 L80 84" fill="none" stroke="url(#edge)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>' />
+
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; margin: 2rem auto; max-width: 800px; padding: 0 1rem; }
-      h1 { margin-bottom: 0.25rem; }
-      .muted { color: #666; font-size: 0.95rem; margin-top: 0; }
-      code, a { word-break: break-all; }
-      ul { margin-top: 0.25rem; }
-      .card { border: 1px solid #e4e4e7; border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0; }
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+      :root{
+        --bg: #0b0f16;
+        --card: #111827;
+        --fg: #e5e7eb;
+        --muted: #9ca3af;
+        --border: #1f2937;
+        --accent: #93c5fd;
+      }
+      *{box-sizing:border-box}
+      html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;line-height:1.6}
+      main{max-width:880px;padding:2rem 1rem 4rem;margin:0 auto}
+      header{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+      h1{font-size:clamp(1.75rem,2.5vw,2.25rem);margin:0 0 .25rem 0}
+      .muted{color:var(--muted);font-size:.95rem;margin:.15rem 0 1.25rem 0}
+      section{border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin:1rem 0;background:var(--card)}
+      h2{font-size:1.15rem;margin:0 0 .5rem 0}
+      h3{font-size:1rem;margin:.75rem 0 .25rem}
+      h4{font-size:.95rem;margin:.5rem 0 .25rem;color:var(--muted)}
+      ul{margin:.25rem 0 .75rem 1.1rem}
+      code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+      a{color:var(--accent);text-decoration:underline;word-break:break-word}
+      footer{margin-top:2rem;font-size:.95rem;color:var(--muted)}
+      a:focus,button:focus{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+      .glow{box-shadow:0 0 0 1px rgba(147,197,253,.08),0 8px 28px rgba(147,197,253,.06) inset}
     </style>
   </head>
   <body>
-    <h1>Privacy Policy for ArchCraft GPT</h1>
-    <p class="muted">Last updated: 2025-09-20</p>
+    <main role="main">
+      <header>
+        <!-- Inline SVG logo -->
+        <div style="width:56px;height:56px;flex:0 0 56px" class="glow" aria-hidden="true">
+          <svg width="56" height="56" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ArchCraft logo">
+            <defs>
+              <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+                <stop offset="0%" stop-color="#1b2332"/>
+                <stop offset="100%" stop-color="#0e1420"/>
+              </radialGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.8" result="blur"/>
+                <feFlood flood-color="#6be6ff" flood-opacity="0.45"/>
+                <feComposite in2="blur" operator="in"/>
+                <feMerge>
+                  <feMergeNode/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="innershadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feOffset dx="0" dy="1"/>
+                <feGaussianBlur stdDeviation="1.2" result="offblur"/>
+                <feComposite in="SourceGraphic" in2="offblur" operator="arithmetic" k2="-1" k3="1"/>
+              </filter>
+              <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#9aefff"/>
+                <stop offset="100%" stop-color="#25b7d6"/>
+              </linearGradient>
+            </defs>
+            <circle cx="64" cy="64" r="60" fill="url(#bg)"/>
+            <path d="M64 16 L108 104 H20 Z"
+                  fill="none"
+                  stroke="url(#edge)"
+                  stroke-width="4.5"
+                  filter="url(#glow)"/>
+            <path d="M64 28 L96 92 H32 Z"
+                  fill="#101a28"
+                  filter="url(#innershadow)"/>
+            <path d="M48 84 L64 70 L80 84"
+                  fill="none"
+                  stroke="url(#edge)"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  filter="url(#glow)"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Privacy Policy for ArchCraft GPT</h1>
+          <p class="muted">Last updated: <span id="last-updated">—</span></p>
+        </div>
+      </header>
 
-    <div class="card">
-      <h2>Overview</h2>
-      <p>
-        ArchCraft GPT helps you look up Arch Linux packages, AUR packages, and Linux kernel releases.
-        When you ask a question, the GPT may call public APIs listed below to fetch data needed to answer.
-        <strong>No personal data is collected, stored, or sold by the creator of this GPT.</strong>
-      </p>
-    </div>
+      <section>
+        <h2>Overview</h2>
+        <p>
+          ArchCraft GPT helps you look up Arch Linux packages (official repos and AUR) and Linux kernel releases.
+          To answer your questions, the GPT may query public, unauthenticated endpoints listed below.
+          <strong>No personal data is collected, stored, or sold by the creator of this GPT.</strong>
+        </p>
+      </section>
 
-    <div class="card">
-      <h2>Public APIs Used</h2>
-      <ul>
-        <li><a href="https://archlinux.org" target="_blank" rel="noopener">archlinux.org</a> (official repositories)</li>
-        <li><a href="https://aur.archlinux.org" target="_blank" rel="noopener">aur.archlinux.org</a> (Arch User Repository)</li>
-        <li><a href="https://www.kernel.org" target="_blank" rel="noopener">kernel.org</a> (Linux kernel releases)</li>
-        <li><a href="https://geo.mirror.pkgbuild.com" target="_blank" rel="noopener">geo.mirror.pkgbuild.com</a> (Arch mirrors / pkgbuild content)</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Public APIs Used</h2>
+        <ul>
+          <li><a href="https://archlinux.org" target="_blank" rel="noopener">archlinux.org</a></li>
+          <li><a href="https://aur.archlinux.org" target="_blank" rel="noopener">aur.archlinux.org</a></li>
+          <li><a href="https://www.kernel.org" target="_blank" rel="noopener">kernel.org</a></li>
+          <li><a href="https://geo.mirror.pkgbuild.com" target="_blank" rel="noopener">pkgbuild mirror</a></li>
+        </ul>
+        <h3>Endpoints</h3>
+        <h4>archlinux.org</h4>
+        <ul class="mono">
+          <li>GET /packages/search/json/?name=&lt;term&gt;</li>
+          <li>GET /packages/{repo}/{arch}/{pkgname}/json/</li>
+        </ul>
+        <h4>aur.archlinux.org (RPC v5)</h4>
+        <ul class="mono">
+          <li>GET /rpc/?v=5&amp;type=search&amp;arg=&lt;term&gt;</li>
+          <li>GET /rpc/?v=5&amp;type=info&amp;arg[]=&lt;pkgname&gt;</li>
+          <li>GET /rpc/?v=5&amp;type=multiinfo&amp;arg[]=&lt;pkg1&gt;&amp;arg[]=&lt;pkg2&gt;…</li>
+        </ul>
+        <h4>www.kernel.org</h4>
+        <ul class="mono">
+          <li>GET /releases.json</li>
+        </ul>
+        <h4>geo.mirror.pkgbuild.com</h4>
+        <ul class="mono">
+          <li>Static content/file listings.</li>
+        </ul>
+      </section>
 
-    <div class="card">
-      <h2>APIs &amp; Endpoints Implemented</h2>
+      <section>
+        <h2>What Data Is Sent</h2>
+        <p>Only the query parameters needed for your request:</p>
+        <ul>
+          <li>Package names (e.g., <span class="mono">hyprland</span>)</li>
+          <li>Repo/arch when relevant (e.g., <span class="mono">extra/x86_64</span>)</li>
+        </ul>
+        <p><strong>No PII is sent. No keys or auth required.</strong></p>
+      </section>
 
-      <h3>archlinux.org</h3>
-      <ul class="mono">
-        <li>GET https://archlinux.org/packages/search/json/?name=&lt;term&gt;&amp;repo=&lt;repo?&gt;&amp;arch=&lt;arch?&gt;</li>
-        <li>GET https://archlinux.org/packages/<em>{repo}</em>/<em>{arch}</em>/<em>{pkgname}</em>/json/</li>
-      </ul>
+      <section>
+        <h2>Data Storage &amp; Retention</h2>
+        <ul>
+          <li>No server-side databases are maintained.</li>
+          <li>API requests are transient only.</li>
+          <li>No personal data retained.</li>
+        </ul>
+      </section>
 
-      <h3>aur.archlinux.org (AUR RPC v5)</h3>
-      <ul class="mono">
-        <li>GET https://aur.archlinux.org/rpc/?v=5&amp;type=search&amp;arg=&lt;term&gt;</li>
-        <li>GET https://aur.archlinux.org/rpc/?v=5&amp;type=info&amp;arg[]=&lt;pkgname&gt;</li>
-        <li>GET https://aur.archlinux.org/rpc/?v=5&amp;type=multiinfo&amp;arg[]=&lt;pkg1&gt;&amp;arg[]=&lt;pkg2&gt;…</li>
-      </ul>
+      <section>
+        <h2>Cookies &amp; Tracking</h2>
+        <p>This page sets no cookies. Linked sites may use their own policies.</p>
+      </section>
 
-      <h3>www.kernel.org</h3>
-      <ul class="mono">
-        <li>GET https://www.kernel.org/releases.json</li>
-      </ul>
+      <section>
+        <h2>Security</h2>
+        <ul>
+          <li>Only HTTPS endpoints are used.</li>
+          <li>No secrets or tokens involved.</li>
+          <li>All data exchanged is non-PII.</li>
+        </ul>
+      </section>
 
-      <h3>geo.mirror.pkgbuild.com</h3>
-      <ul class="mono">
-        <li>Static content / file listings as needed for package metadata references.</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Third-Party Links</h2>
+        <p>Linked resources (Arch, AUR, kernel.org) have independent policies. The creator isn’t responsible for them.</p>
+      </section>
 
-    <div class="card">
-      <h2>What Data Is Sent</h2>
-      <p>The GPT only sends the minimum query parameters required to perform your request, for example:</p>
-      <ul>
-        <li>Package names or partial names (e.g., <span class="mono">hyprland</span>, <span class="mono">proton-ge-custom</span>)</li>
-        <li>Repository / architecture when relevant (e.g., <span class="mono">extra/x86_64</span>)</li>
-      </ul>
-      <p><strong>No personally identifiable information (PII) is sent by this GPT.</strong> No API keys or authentication are used.</p>
-    </div>
+      <section>
+        <h2>Jurisdiction &amp; Legal Basis</h2>
+        <p>This is an informational, non-commercial project. Queries are processed under legitimate interest with public data only. No profiling or marketing.</p>
+      </section>
 
-    <div class="card">
-      <h2>Data Storage &amp; Retention</h2>
-      <ul>
-        <li>The GPT does not store any personal data.</li>
-        <li>Requests to public APIs are transient and used only to fulfill your query.</li>
-        <li>No server-side databases are maintained by the GPT creator for this project.</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Changes</h2>
+        <p>This policy may change if APIs or practices change. “Last updated” will refresh above.</p>
+      </section>
 
-    <div class="card">
-      <h2>Contact</h2>
-      <p>
-        For questions or concerns, reach out via GitHub:
-        <a href="https://github.com/420shaggy420" target="_blank" rel="noopener">@420shaggy420</a>
-      </p>
-    </div>
+      <section>
+        <h2>Contact</h2>
+        <p>Reach out via GitHub: <a href="https://github.com/420shaggy420" target="_blank">@420shaggy420</a></p>
+      </section>
+
+      <footer>
+        <p>&copy; <span id="year">2025</span> ArchCraft GPT – Informational use only.</p>
+      </footer>
+    </main>
+
+    <script>
+      (function() {
+        const d = new Date();
+        document.getElementById("last-updated").textContent = d.toISOString().slice(0,10);
+        document.getElementById("year").textContent = String(d.getFullYear());
+      })();
+    </script>
   </body>
 </html>
