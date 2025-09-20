@@ -1,21 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Privacy Policy - ArchCraft GPT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; margin: 2rem auto; max-width: 800px; padding: 0 1rem; }
+      h1 { margin-bottom: 0.25rem; }
+      .muted { color: #666; font-size: 0.95rem; margin-top: 0; }
+      code, a { word-break: break-all; }
+      ul { margin-top: 0.25rem; }
+      .card { border: 1px solid #e4e4e7; border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    </style>
   </head>
   <body>
     <h1>Privacy Policy for ArchCraft GPT</h1>
-    <p>This GPT uses public APIs from:</p>
-    <ul>
-      <li><a href="https://archlinux.org">archlinux.org</a></li>
-      <li><a href="https://aur.archlinux.org">aur.archlinux.org</a></li>
-      <li><a href="https://www.kernel.org">kernel.org</a></li>
-      <li><a href="https://geo.mirror.pkgbuild.com">pkgbuild mirror</a></li>
-    </ul>
-    <p>
-      When you ask about a package, the GPT sends the package name to these APIs.  
-      No personal data is collected, stored, or shared by the creator of this GPT.
-    </p>
+    <p class="muted">Last updated: 2025-09-20</p>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>
+        ArchCraft GPT helps you look up Arch Linux packages, AUR packages, and Linux kernel releases.
+        When you ask a question, the GPT may call public APIs listed below to fetch data needed to answer.
+        <strong>No personal data is collected, stored, or sold by the creator of this GPT.</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Public APIs Used</h2>
+      <ul>
+        <li><a href="https://archlinux.org" target="_blank" rel="noopener">archlinux.org</a> (official repositories)</li>
+        <li><a href="https://aur.archlinux.org" target="_blank" rel="noopener">aur.archlinux.org</a> (Arch User Repository)</li>
+        <li><a href="https://www.kernel.org" target="_blank" rel="noopener">kernel.org</a> (Linux kernel releases)</li>
+        <li><a href="https://geo.mirror.pkgbuild.com" target="_blank" rel="noopener">geo.mirror.pkgbuild.com</a> (Arch mirrors / pkgbuild content)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>APIs &amp; Endpoints Implemented</h2>
+
+      <h3>archlinux.org</h3>
+      <ul class="mono">
+        <li>GET https://archlinux.org/packages/search/json/?name=&lt;term&gt;&amp;repo=&lt;repo?&gt;&amp;arch=&lt;arch?&gt;</li>
+        <li>GET https://archlinux.org/packages/<em>{repo}</em>/<em>{arch}</em>/<em>{pkgname}</em>/json/</li>
+      </ul>
+
+      <h3>aur.archlinux.org (AUR RPC v5)</h3>
+      <ul class="mono">
+        <li>GET https://aur.archlinux.org/rpc/?v=5&amp;type=search&amp;arg=&lt;term&gt;</li>
+        <li>GET https://aur.archlinux.org/rpc/?v=5&amp;type=info&amp;arg[]=&lt;pkgname&gt;</li>
+        <li>GET https://aur.archlinux.org/rpc/?v=5&amp;type=multiinfo&amp;arg[]=&lt;pkg1&gt;&amp;arg[]=&lt;pkg2&gt;…</li>
+      </ul>
+
+      <h3>www.kernel.org</h3>
+      <ul class="mono">
+        <li>GET https://www.kernel.org/releases.json</li>
+      </ul>
+
+      <h3>geo.mirror.pkgbuild.com</h3>
+      <ul class="mono">
+        <li>Static content / file listings as needed for package metadata references.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>What Data Is Sent</h2>
+      <p>The GPT only sends the minimum query parameters required to perform your request, for example:</p>
+      <ul>
+        <li>Package names or partial names (e.g., <span class="mono">hyprland</span>, <span class="mono">proton-ge-custom</span>)</li>
+        <li>Repository / architecture when relevant (e.g., <span class="mono">extra/x86_64</span>)</li>
+      </ul>
+      <p><strong>No personally identifiable information (PII) is sent by this GPT.</strong> No API keys or authentication are used.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Storage &amp; Retention</h2>
+      <ul>
+        <li>The GPT does not store any personal data.</li>
+        <li>Requests to public APIs are transient and used only to fulfill your query.</li>
+        <li>No server-side databases are maintained by the GPT creator for this project.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>
+        For questions or concerns, reach out via GitHub:
+        <a href="https://github.com/420shaggy420" target="_blank" rel="noopener">@420shaggy420</a>
+      </p>
+    </div>
   </body>
 </html>
